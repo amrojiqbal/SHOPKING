@@ -456,7 +456,7 @@ li{
         font-size: 18px;
     }
     #third_col{
-        width: 90%;
+        width: 96%;
     }
     /* #link_col{
     } */
@@ -510,7 +510,7 @@ li{
     .btn_cart{
         margin: 1px;
         font-size: 18px;
-        padding: 7px;
+        padding: 10px 7px;
     }
     .h1_,.h2_{
         font-size: 25px;
