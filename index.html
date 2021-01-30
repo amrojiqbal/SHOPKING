@@ -135,7 +135,7 @@
             </div>
             
             <div id="first_col">
-                <img src="Images/blue_model_1.webp" alt="1" id="model_1" onclick="viewimage(event)">
+                <img src="Images/blue_model_1.webp" class="active_model" alt="1" id="model_1" onclick="viewimage(event)">
                 <img src="Images/blue_model_2.webp" alt="1" id="model_2" onclick="viewimage(event)">
                 <img src="Images/blue_model_3.webp" alt="1" id="model_3" onclick="viewimage(event)">
                 <img src="Images/blue_model_4.webp" alt="1" id="model_4" onclick="viewimage(event)">
@@ -150,31 +150,31 @@
                     <h2 class="h2_">Men's Classic T-shirt</h2>
                     <br>
                     <p class="p_"> <b>&#8377 560</b> <del>999</del> <span class="red">( 44% OFF)</span></p>
-                    <p class="p_ green">Inclusive of all taxes</p>
+                    <p class="p_ green" style="font-size: 13px;">Inclusive of all taxes</p>
                 </div>
                 <br>
                 <div id="color_selection">
                     <h3 class="h3_">SELECT COLOR</h3>
                     <button class="btn_ color-hover" id="btn_red" value="red" onclick="change_color(event)"></button>
-                    <button class="btn_ color-hover" id="btn_blue" value="blue" onclick="change_color(event)"></button>
+                    <button class="btn_ color-hover active_color" id="btn_blue" value="blue" onclick="change_color(event)"></button>
                     <button class="btn_ color-hover" id="btn_black" value="black" onclick="change_color(event)"></button>
                 </div>
                 <br>
                 <div id="size_selection">
                     <h3 class="h3_">SELECT SIZE</h3>
 
-                    <button class="btn_ size-hover">S</button>
-                    <button class="btn_ size-hover">M</button>
-                    <button class="btn_ size-hover">L</button>
-                    <button class="btn_ size-hover">XL</button>
+                    <button class="btn_ size-hover active_size" onclick="change_size(event)">S</button>
+                    <button class="btn_ size-hover" onclick="change_size(event)">M</button>
+                    <button class="btn_ size-hover" onclick="change_size(event)">L</button>
+                    <button class="btn_ size-hover" onclick="change_size(event)">XL</button>
                 </div>
                 <br>
                 <div id="addtocart">
                     <button class="btn_cart">
-                        <img src="Images/cart.png" alt="cart">ADD TO CART
+                        <img src="Images/cart.png" alt="cart" style="outline: none;" id="invert">ADD TO CART
                     </button>
                     <button class="btn_cart">
-                        <img src="Images/light.png" alt="cart"> BUY NOW
+                        <img src="Images/light.png" alt="cart" style="outline: none;"> BUY NOW
                     </button>
                 </div>
                 <br>
@@ -187,7 +187,7 @@
                     </span>
                 </div>
                 <div id="delivery_form">
-                    <form action="pincode.php">
+                    <form action="#">
                         <input type="text" name="pincode" id="pincode" placeholder="Enter pincode">
                         <input type="submit" name="check" id="check_pincode" value="Check">
                     </form>
@@ -328,9 +328,9 @@
             </div>
             <div id="last_row">
                 <div id="copyright">
-                    <h3 class="h3_">Copyright &copy; Shopking 2020</h3>
+                    <p class="p_">Copyright &copy; Shopking 2020</p>
                 </div>
-                <h2 class="h2_">Made with <img src="Images/heart.jpg"> by Iqbal</h2>
+                <p class="p_">Made with <img src="Images/heart.jpg"> by Iqbal</p>
             </div>
         </footer>
     </div>
