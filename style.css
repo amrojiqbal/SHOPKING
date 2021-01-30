@@ -2,11 +2,15 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Baloo Bhai 2', cursive;
+    outline: none;
 }
+/* button:focus {
+    outline:0;
+} */
 .h1_{
     font-family: 'Potta One', cursive;
     font-weight: bold;
-    color: #c10c0c;
+    color: #1c2237;
 }
 .a_{
     text-decoration: none;
@@ -34,26 +38,27 @@ li{
     display: flex;
 }
 .login_signup a:hover{
-    color: blue;
+    color: #74bcfb;
 }
 #first_row {
     /* display: flex; */
-    background-color: black;
+    background-color: #1c2237;
     color: white;
     justify-content: space-around;
     width: 100%;
 }
 #select_country, .login_signup, .login_signup a{
     padding: 10px;
-    font-size: 15px;
+    font-size: 18px;
     color: white;
     margin: 8px;
 }
 #first_row select{
-    background-color: black;
+    background-color: #1c2237;
     color: white;
     border: none;
     font-size: 17px;
+    cursor: pointer;
     /* margin: 8px; */
 }
 
@@ -76,9 +81,11 @@ li{
     font-size: 22px;
     list-style: none;
     margin: 0px 20px;
+    transition: 0.3s;
 }
 #list a:hover{
-    color: #519eed;
+    color: #0a32f3;
+    border-bottom: 3px solid #0a32f3;
 }
 #search_txt input{
     font-size: 16px;
@@ -126,9 +133,13 @@ li{
     width: 10%;
     /* border: 2px solid black; */
 }
+.active_model{
+    opacity: 50%;
+}
 #first_col img{
-    margin: 5px;
+    margin: 7px 5px;
     width: 70px;
+    transition: 0.3s;
 }
 #first_col img:hover{
     transform: scale(1.2);
@@ -159,6 +170,11 @@ li{
     margin: 5px 5px 5px 0px;
     background-color: white;
     font-size: 18px;
+    /* outline: none; */
+    transition: 0.3s;
+}
+.btn_:focus{
+    outline: none;
 }
 #btn_red{
     /* padding: 10px; */
@@ -175,12 +191,13 @@ li{
     border: 2px solid white;
     background-color: black;
 }
-.color-hover:hover{
+.active_color, .color-hover:hover{
     transform: scale(1.2);
 }
-.size-hover:hover{
+.active_size, .size-hover:hover{
     border: 2px solid palevioletred;
     color: palevioletred;
+    transform: scale(1.1);
 }
 #addtocart{
     width: 100%;
@@ -192,17 +209,25 @@ li{
     width: 46%;
     margin: 10px;
     font-size: 25px;
-    background-color: #27c5bb;
+    background-color: #1c2237;
     border: none;
     cursor: pointer;
     transition: 0.8s;
     border-radius: 8px;
+    /* outline-style: none; */
+    color: white;
+}
+.btn_cart:focus{
+    outline: none;
+}
+#invert{
+    filter: invert(100%);
 }
 .btn_cart img{
     width: 20px;
 }
 .btn_cart:hover{
-    background-color: #86bcc294;
+    background-color: #6d7cb1;
 }
 
 #product_details, #customer_review{
@@ -283,6 +308,9 @@ li{
 }
 .p_, .h2_, .h3_{
     margin: 0px;
+}
+.h3_{
+    font-weight: bold;
 }
 #carouselExampleIndicators{
     display: none;
