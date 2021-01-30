@@ -1,11 +1,18 @@
 function viewimage(selection)
 {
     let option=selection;
-    console.log(option.path[0]);
-    let option_id=option.path[0].id;
+    // console.log(option.path[0]);
+    // let option_id=option.path[0].id;
     let option_src=option.path[0].src;
-
-    let Model_view=document.getElementById('main_model').src=option_src;
+    for(let i=1;i<=5;i++)
+    {
+        let modelmenu=document.getElementById(`model_${i}`);
+        modelmenu.classList.remove('active_model');
+        // modelmenu.
+        
+    }
+    option.path[0].className='active_model';
+    document.getElementById('main_model').src=option_src;
 
 }
 
@@ -13,9 +20,9 @@ function ToggleHide(hide)
 {
     // alert('Hide');
     let option=hide.path;
-    console.log(option[0]);
+    // console.log(option[0]);
     let change_sign=option[0];
-    console.log(option[3].querySelector('.toggleclass'));
+    // console.log(option[3].querySelector('.toggleclass'));
     let data=option[3].querySelector('.toggleclass');
     if(data.style.display!='none')
     {
@@ -34,11 +41,8 @@ function change_color(choice)
     // alert('Hi, there');
 
     let color=choice.path[0].value;
-    // let modelmenu=choice.path[4].querySelector('#first_col');
-    // console.log(modelmenu);
     let source='Images/';
     let hamburger_models=document.querySelectorAll('.d-block');
-    // console.log(hamburger_models[1].src);
 
     for(let i=1;i<=5;i++)
     {
@@ -49,8 +53,16 @@ function change_color(choice)
         hamburger_models[i-1].src=source+`${color}_model_${i}.webp`;
         
     }
+    let all_color=document.querySelectorAll('.color-hover');
+
+    for(let i=0;i<all_color.length;i++)
+    {
+        all_color[i].classList.remove('active_color');
+    }
     let main_model=document.querySelector('#main_model');
     main_model.src=source+`${color}_model_1.webp`;
+
+    choice.path[0].className+=' active_color';
 }
 
 function myFunction(){
@@ -60,7 +72,18 @@ function myFunction(){
         list.style.display='none';
     }
     else{
-        
         list.style.display='block';
     }
+}
+
+function change_size(choice){
+    let curr=choice.path[0];
+    // console.log(curr);
+
+    let all_size=document.querySelectorAll('.size-hover');
+    for(let i=0;i<all_size.length;i++)
+    {
+        all_size[i].classList.remove('active_size');
+    }
+    curr.className+=' active_size';
 }
