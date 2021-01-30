@@ -358,6 +358,9 @@ li{
     #mobile_hamburger{
         display: block;
     }
+    #hamburger_list{
+        display: none;
+    }
     .p_,.menu{
         font-size: 15px;
     }
